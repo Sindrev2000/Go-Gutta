@@ -22,9 +22,9 @@ Inspirasjon
     <li> <a href="7.Nyhetsbrev.html"> Nyhetsbrev </a> </li>
     <li> <a href="8.Kontakt.html"> Kontakt oss </a></li>
     </ul> </h1>
-<p> Ikke bare er vi gutta, men vi bygger sykler og inspirerer verden med dem </p>
-<img src="Inspo-cafe.jpg" alt="inspo-cafe" align="center" style="width:620px;">
-<img src="Inspo-chopper.jpg" alt="inspo-chopper" align="center" style="width:620px;">
+<p> Ikke bare er vi gutta, men vi bygger sykler og inspirerer verden med dem. Trykk på bildene for å se før/etter. </p>
+<img id="idcafe" src="Inspo-cafe.jpg" alt="inspo-cafe" align="center" style="width:620px;">
+<img id="idchop" src="Inspo-chopper.jpg" alt="inspo-chopper" align="center" style="width:620px;">
  <p id="bottom"> <br> <iframe height="0.1" width="1225" style="border:2px solid rgb(250, 250, 250);"> </iframe>
         <br>
         <br>
@@ -42,4 +42,46 @@ Tlf: 2103 7700 <br>
 email@Gogutta.no <br>
 Org.nr: 919050942MVA </p>
 </body>
+    <script>
+        var manen1 = document.getElementById("idcafe");
+        manen1.addEventListener("click", skiftfunk);
+        var manen2 = document.getElementById("idcafe")
+        var vari=true;
+        new Image(skiftfunk).src = "Inspo-cafe.jpg";
+        
+        
+        function skiftfunk () {
+            if (vari) {
+                manen1.src="Inspo-cafeT.jpg";
+                vari=false;
+            }
+            else {
+                manen2.src="Inspo-cafe.jpg";
+                vari=true;
+            }
+            
+            
+        }
+        
+        var mane1 = document.getElementById("idchop");
+        mane1.addEventListener("click", skiftfunk2);
+        var mane2 = document.getElementById("idchop")
+        var vari2=true;
+        new Image(skiftfunk2).src = "Inspo-chopper.jpg";
+        
+                function skiftfunk2 () {
+            if (vari2) {
+                mane1.src="Inspo-chopperT.jpg";
+                vari2=false;
+            }
+            else {
+                mane2.src="Inspo-chopper.jpg";
+                vari2=true;
+            }
+            
+            
+        }
+        
+        
+    </script>
 </html>
