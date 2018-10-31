@@ -16,21 +16,6 @@ h1 {
     justify-content: space-between;
 }
 
-#Marquee {
-    
-}
-
-#overskrift {
-    
-}
-
-
-}
-
-#gg {
-    background-color: gray;
-}
-
 #Innhold {
     list-style-type: none;
     background: rgb(50, 50, 50);
@@ -105,8 +90,11 @@ margin: 15px 200px 15px 200px;
 
 main {
 padding:10px;
-text-align: center;
-    
+    text-align: center;
+}
+
+main2 {
+    text-align: left;
 }
 
 p {
