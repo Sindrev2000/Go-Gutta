@@ -15,6 +15,9 @@ padding: 0px;
     
 }
 
+
+}
+
 #gg {
     background-color: gray;
 }
@@ -82,7 +85,7 @@ background-image: url("Background.jpg");
 font-family:"century gothic", impact;
 font-size:20px;
 padding: 0px;
-margin: 0px 40px 0px 40px;
+margin: 0px 200px 0px 200px;
 }
 
 iframe {
