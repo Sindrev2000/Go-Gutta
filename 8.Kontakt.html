@@ -6,27 +6,32 @@
 </head>
     
 <body>
-<h1> 
-     <a href="index.html">
-  <img src="logo.jpg" alt="logo" align="right" style="width:95px;">
-</a>    
-    <br>
-Kontakt oss 
+
+    <header style="font-size:100%;"> 
+        <div class="flex">
+            <div style="flex:1">
+                <Marquee scrollamount="30"> <img src="VMC1.png"> </Marquee>
+                <h1>Kontakt oss</h1>
+            </div>
+            <a href="index.html"> <img src="logo.jpg" alt="logo" align="right" style="width:95px;"> </a>
+        </div>
+    
     <ul id="Innhold">
     <li> <a href="2.Om-oss.html"> Om oss </a></li>
     <li> <a href="3.V%C3%A5re-sykler.html">  Våre motorsykler </a></li>
     <li> <a href="4.Inspirasjon.html"> Inspirasjon </a> </li>
     <li> <a href="5.Verksted.html"> Verksted </a> </li>
     <li> <a href="6.Nettbutikk.html"> Nettbutikk </a></li>
-    <li> <a href="7.Nyhetsbrev.html"> Nyhetsbrev </a> </li>
     <li> <a href="8.Kontakt.html"> Kontakt oss </a></li>
-    </ul> </h1>
+    </ul> </header>
     <div id="gg">
 <p> Du finner oss forskjellige steder i Oslo </p>
     
 <form id="kontakt" method="get">
     Ditt navn <br>
-    <input type="text" name="dittnavn" placeholder="Navn"> <br>
+    <input type="text" name="dittnavn" placeholder="Fornavn"> <br>
+    <input type="text" name="dittnavn" placeholder="Etternavn"> <br>
+    <input type="text" name="email" placeholder="Email"> <br>
     Hva slags motorsykkel kjører du? <br>
     <input type="text" name="DinMotorsykkel" placeholder="Merke"> <br>
     <input type="text" name="DinMotorsykkel" placeholder="Modell"> <br>
@@ -38,6 +43,8 @@ Kontakt oss
     <input type="radio" name="gender" value="male"> Mann<br>
     <input type="radio" name="gender" value="female"> Dame<br>
     <input type="radio" name="gender" value="other"> Annet <br>
+    <input type="checkbox" checked> Jeg vil motta mail med relevant info om spesialtilbud fra Go Gutta
+    <br>
     <input type="submit" name="sendinn" value="Send inn">
 </form>  
     

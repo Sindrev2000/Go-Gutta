@@ -1,10 +1,19 @@
 
 
-h1 { 
-color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);
-margin: 0px;
-padding: 0px;
+header { 
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    margin: 0px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
 }
 
 #Marquee {
@@ -65,7 +74,7 @@ padding: 0px;
     flex-wrap: wrap;
 }
 li {
-font-size: 45px;
+font-size: 39px;
 margin: 0px;
 }
 
@@ -80,17 +89,28 @@ li a {
     Width: 100%;
 }
 
+html {
+    background-image: url("Background.jpg");
+}
+
 body {
-background-image: url("Background.jpg");
+border: 1px solid;
+background-color: lightgray;
 font-family:"century gothic", impact;
 font-size:20px;
 padding: 0px;
-margin: 0px 200px 0px 200px;
+margin: 15px 200px 15px 200px;
 }
 
-iframe {
 
+main {
+padding:10px;
+text-align: center;
     
+}
+
+p {
+    margin: auto;
 }
 
 #bottom {
