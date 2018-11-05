@@ -18,7 +18,7 @@ h1 {
 
 #Innhold {
     list-style-type: none;
-    background: rgb(50, 50, 50);
+    background: rgb(80, 80, 80);
     width: 100%;
     margin: 0px;
     padding: 0px;
@@ -84,7 +84,7 @@ background-image: url("Background.jpg");
 font-family:"century gothic", impact;
 font-size:20px;
 padding: 0px;
-margin: 15px 200px 15px 200px;
+margin: 15px 180px 15px 180px;
 }
 
 
@@ -99,6 +99,17 @@ main2 {
 
 p {
     margin: auto;
+}
+
+button, input {
+    border: 1px solid;
+    outline: none;
+    padding: 4px 8px;
+    background-color: lightgray;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 5px;
+    border-radius: 5px;
 }
 
 #bottom {
@@ -131,4 +142,8 @@ tr:nth-child(even) {
 
 #kontakt {
     background-color:
+}
+
+iframe {
+    width:100%;
 }

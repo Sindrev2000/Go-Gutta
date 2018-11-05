@@ -1,0 +1,69 @@
+<html>
+<head>
+<link rel="stylesheet" href="Go-Gutta.css">
+<meta charset="utf-8">
+<link rel="icon" href="favicon.ico">
+</head>
+    
+<body>
+
+    <header style="font-size:100%;"> 
+        <div class="flex">
+            <div style="flex:1">
+                <Marquee scrollamount="30"> <img src="VMC1.png"> </Marquee>
+                <h1>Kw til hestekrefter</h1>
+            </div>
+            <a href="index.html"> <img src="logo.jpg" alt="logo" align="right" style="width:95px;"> </a>
+        </div>
+    
+    <ul id="Innhold">
+    <li> <a href="2.Om-oss.html"> Om oss </a></li>
+    <li> <a href="3.V%C3%A5re-sykler.html">  Våre motorsykler </a></li>
+    <li> <a href="4.Inspirasjon.html"> Inspirasjon </a> </li>
+    <li> <a href="5.Verksted.html"> Verksted </a> </li>
+    <li> <a href="6.Nettbutikk.html"> Nettbutikk </a></li>
+    <li> <a href="8.Kontakt.html"> Kontakt oss </a></li>
+    </ul> </header>
+    
+    
+    <br>
+    <p style="margin: 10px;"> Kw: <input type="number" id="idkw"> </p>
+<button id="idknapp" style="margin: 10px;"> Gjør om </button>    
+<br>
+    <br>
+<p style="margin: 10px;">Hestekrefter:</p> <p id="idhk"></p>
+    <br>
+    <br>
+       
+        
+    <p id="bottom"> <br> <iframe height="0.1" width="1225" style="border:2px solid rgb(250, 250, 250);"> </iframe>
+        <br>
+        <br>
+        <br>
+        Go Gutta AS <br>
+Besøkadresse: <br>
+Oslo 69 <br>
+0121 Oslo <br>
+<br>
+Postadresse: <br>
+Postboks 77 - Nordstrand <br>
+1177 Oslo <br>
+<br>
+Tlf: 2103 7700 <br>
+email@Gogutta.no <br>
+Org.nr: 919050942MVA </p>
+
+    
+<script>
+    var kw=document.getElementById("idkw");
+    var knapp = document.getElementById("idknapp");
+    knapp.addEventListener("click", omregning);
+    
+    function omregning () {
+        var hk = (kw.value) * (1.3596216173);
+        var svar = document.getElementById("idhk");
+        svar.innerHTML=Math.round(hk*100)/100;
+    }
+</script>
+</Body>
+</html>
