@@ -31,7 +31,8 @@
 <button id="idknapp" style="margin: 10px;"> Gjør om </button>    
 <br>
     <br>
-<p style="margin: 10px;">Hestekrefter:</p> <p id="idhk"></p>
+<p style="margin: 10px;">Hestekrefter:</p> 
+    <p style="margin: 10px;" id="idhk"></p>
     <br>
     <br>
        
@@ -62,8 +63,8 @@ Org.nr: 919050942MVA </p>
     function omregning () {
         var hk = (kw.value) * (1.3596216173);
         var svar = document.getElementById("idhk");
-        svar.innerHTML=Math.round(hk*100)/100;
+        svar.innerHTML=Math.round(hk*10)/10;
     }
 </script>
-</Body>
+    </body>
 </html>
