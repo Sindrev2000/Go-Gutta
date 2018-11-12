@@ -8,7 +8,7 @@ header {
 }
 
 h1 {
-    margin: 0px;
+    margin: 0px 0px 0px 10px;
 }
 
 .flex {
@@ -101,7 +101,7 @@ p {
     margin: auto;
 }
 
-button, input {
+button, input, textarea {
     border: 1px solid;
     outline: none;
     padding: 4px 8px;
@@ -163,3 +163,4 @@ iframe {
 .extra-margin > * {
     margin: 50px 0;
 }
+
