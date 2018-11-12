@@ -84,7 +84,9 @@ body {
     font-family:"century gothic", impact;
     font-size:20px;
     padding: 0px;
-    margin: 15px 180px 15px 180px;
+    margin: 15px auto;
+    width: 70vw;
+    min-width: 275px;
 }
 
 
@@ -113,7 +115,7 @@ button, input, textarea {
 }
 
 #bottom {
-    margin: 20px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
     padding: 10px;
     color: red;
     background-color: black;
@@ -138,6 +140,7 @@ tr:nth-child(even) {
 
 #ad {
     width: 100%;
+    margin-bottom: -5px;
 }
 
 #kontakt {
