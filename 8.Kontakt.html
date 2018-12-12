@@ -11,10 +11,10 @@
     <header style="font-size:100%;"> 
         <div class="flex">
             <div style="flex:1">
-                <Marquee scrollamount="30"> <img src="VMC1.png"> </Marquee>
+                <Marquee scrollamount="30"> <img src="VMC1.png" style="height: 3.5vw;"> </Marquee>
                 <h1>Kontakt oss</h1>
             </div>
-            <a href="index.html"> <img src="logo.jpg" alt="logo" align="right" style="width:95px;"> </a>
+            <a href="index.html" style="width: ;"> <img src="logo.jpg" alt="logo" align="right" style="width:7.5vw;"> </a>
         </div>
     
     <ul id="Innhold">
@@ -31,18 +31,23 @@
     <main2>
     
 <form id="kontakt" method="get" action="Takk-Nyhetsbrev.html">
-    Ditt navn <br>
+    <div class="skjema"> Ditt navn </div>
     <input type="text" name="dittnavn" placeholder="Fornavn"> <br>
     <input type="text" name="dittnavn" placeholder="Etternavn"> <br>
     <input type="text" name="email" placeholder="Email"> <br> <br>
-    Hva slags motorsykkel kjører du? <br>
+    <div class="skjema"> Hva slags motorsykkel kjører du? </div>
     <input type="text" name="DinMotorsykkel" placeholder="Merke"> <br>
     <input type="text" name="DinMotorsykkel" placeholder="Modell"> <br>
-    <input type="text" name="DinMotorsykkel" placeholder="Kubikk"> <br>
-    <input type="text" name="DinMotorsykkel" placeholder="Hestekrefter"> 
+    <input type="number" name="DinMotorsykkel" placeholder="Årsmodell"> <br>
+    <input type="number" name="DinMotorsykkel" placeholder="Kubikk"> <br>
+    <input type="number" name="DinMotorsykkel" placeholder="Hestekrefter"> 
     <text style="font-size:15px;"> 
-    Er du usikker på antall hestekrefter? <a href="Kw-til-HK.html" target="_blank"> regn det ut her. </a> </text> <br> <br>
-    Hva anngår ditt spørsmål? <br>
+    Er du usikker på antall hestekrefter? <a href="Kw-til-HK.html" target="_blank"> regn det ut her. </a> </text> <br>
+    <select id="idselect" name="type">
+    </select>
+    <br>
+    <br>
+    <div class="skjema"> Hva anngår ditt spørsmål? </div>
     <textarea type="text" cols="40" rows="5" name="DinMotorsykkel" placeholder="Spørsmål"></textarea> <br>
 
     <input type="radio" name="gender" value="male"> Mann<br>
@@ -53,7 +58,7 @@
     <input type="submit" name="sendinn" value="Send inn">
 </form>  
     
-<img src="Maps.jpg" alt="maps" align="center" style="width:420px;">
+<img src="Maps.jpg" alt="maps" align="center" style="width: 38vw;">
         </main2>
     </main>
         
@@ -65,7 +70,7 @@
 Besøkadresse: <br>
 Oslo 69 <br>
 0121 Oslo <br>
-     <a href="https://www.finn.no/mc/all/search.html?filters=" target="_blank"> <img src="finncom.png" alt="finn" align="right" style="width:340px; border-radius: 10px;"> </a>
+     <a href="https://www.finn.no/mc/all/search.html?filters=" target="_blank"> <img src="finncom.png" alt="finn" align="right" class="finn"> </a>
 <br>
 Postadresse: <br>
 Postboks 77 - Nordstrand <br>
@@ -74,5 +79,70 @@ Postboks 77 - Nordstrand <br>
 Tlf: 2103 7700 <br>
 email@Gogutta.no <br>
 Org.nr: 919050942MVA </p>
+    
+     <option value="Chopper">Chopper</option>
+    <option value="Classic/Nakne">Classic/Nakne</option>
+    <option value="Cross/Offroad">Cross/Offroad</option>
+    <option value="Cruiser">Cruiser</option>
+    <option value="Custom">Custom</option>
+    <option value="Lett MC ">Lett MC </option>
+    <option value="Scooter">Scooter</option>
+    <option value="Sidevogn/Trike">Sidevogn/trike</option>
+    <option value="Sport">Sport</option>
+    <option value="Touring ">Touring </option>
+    <option value="Veteran">Veteran</option>
+    <option value="Annet">Annet</option>
+    
+    <script>
+    var select=document.getelementbyid("idselect")
+    
+    var verdier = ["chopper", "Classic", "Cross"];
+    
+    var htmltekst = "";
+    for (var i=0; i<verdier.length; i++) {
+        htmltekst += "<option>" + verdier[i] + "</option>";
+    }
+    //legger til en ledetekst som siste element
+    htmltekst += "<option id='idLedetekst'>Type MC</option>"
+    
+    select.innerHTML += htmltekst;
+    //kan velge ingenting:
+    //valgboks.selectedIndex = -1;
+    
+    //kan velge ledetekst:
+    select.selectedIndex = verdier.length;
+    document.getElementById("idLedetekst").style.display = "none";
+    
+    //med en nedtrekksmeny er det to klikk, så vi må bruke change
+    select.addEventListener("change",valgfunk);
+    
+	//eventuelt vis fram alle verdier:
+    //valgboks.size = verdier.length;
+	
+    //hvis verdiene vises med .size, så kan man bruke click
+    //da kan man velge samme verdi to ganger på rad
+    //valgboks.addEventListener("click",valgfunk);
+    
+    function valgfunk() {
+        pValg.innerHTML += "<br>" + verdier[valgboks.selectedIndex];
+        console.log(valgboks.value)
+        console.log(valgboks.selectedIndex)
+    }
+    
+    btnReset.addEventListener("click",resetfunk);
+	
+	function resetfunk() {
+		pValg.innerHTML = "Du har valgt:";
+		valgboks.selectedIndex = verdier.length;
+	}
+    
+    
+
+        
+        
+        
+        
+    </script>
+    
 </body>
 </html>

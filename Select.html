@@ -1,0 +1,75 @@
+<html>
+<head>
+<link rel="stylesheet" href="Go-Gutta.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+    <!--
+    <p>Velg en frukt:</p>
+        -->
+    <select id="idSelect">  
+        <!-- Verdier settes inn fra script -->
+    <option>Eple</option><option>Pære</option><option>Banan</option><option>Appelsin</option><option>Drue</option><option id="idLedetekst" style="display: none;">Velg en frukt</option></select>
+    
+    <p id="idpValg">Du har valgt:</p>
+    <br>
+    <input id="idinp" type="text">
+    <br>
+	<button id="idbtn">Reset</button>
+	
+<script>
+   
+    var valgboks = document.getElementById("idSelect");
+    var pValg = document.getElementById("idpValg");
+	var btnReset = document.getElementById("idbtn");
+    var inp = document.getElementById("idinp");
+    
+    var verdier = ["Eple","Pære","Banan","Appelsin","Drue"];
+    
+    var htmltekst = "";
+    for (var i=0; i<verdier.length; i++) {
+        htmltekst += "<option>" + verdier[i] + "</option>";
+    }
+    //legger til en ledetekst som siste element
+    htmltekst += "<option id='idLedetekst'>Velg en frukt</option>"
+    
+    valgboks.innerHTML += htmltekst;
+    //kan velge ingenting:
+    //valgboks.selectedIndex = -1;
+    
+    //kan velge ledetekst:
+    valgboks.selectedIndex = verdier.length;
+    document.getElementById("idLedetekst").style.display = "none";
+    
+    //med en nedtrekksmeny er det to klikk, så vi må bruke change
+    valgboks.addEventListener("change",valgfunk);
+    
+	//eventuelt vis fram alle verdier:
+    //valgboks.size = verdier.length;
+	
+    //hvis verdiene vises med .size, så kan man bruke click
+    //da kan man velge samme verdi to ganger på rad
+    //valgboks.addEventListener("click",valgfunk);
+    
+    function valgfunk() {
+        pValg.innerHTML += "<br>" + verdier[valgboks.selectedIndex];
+        console.log(valgboks.value)
+        console.log(valgboks.selectedIndex)
+    }
+    
+    btnReset.addEventListener("click",resetfunk);
+	
+	function resetfunk() {
+		pValg.innerHTML = "Du har valgt:";
+		valgboks.selectedIndex = verdier.length;
+	}
+    
+    
+</script>
+
+</body>
+
+</html>
