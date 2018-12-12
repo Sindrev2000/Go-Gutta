@@ -1,72 +1,74 @@
 <html>
-<head>
-<link rel="stylesheet" href="Go-Gutta.css">
-<meta charset="utf-8">
-<link rel="icon" href="favicon.ico">
-</head>
-    
-<body>
+    <head>
+        <link rel="stylesheet" href="Go-Gutta.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <link rel="icon" href="favicon.ico">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    </head>
 
-    <header style="font-size:100%;"> 
-        <div class="flex">
-            <div style="flex:1">
-                <Marquee scrollamount="30"> <img src="VMC1.png" style="height: 3.5vw;"> </Marquee>
-                <h1>Kw til hestekrefter</h1>
+    <body>
+
+        <header style="font-size:100%;"> 
+            <div class="flex">
+                <div style="flex:1">
+                    <Marquee scrollamount="30"> <img src="VMC1.png" style="height: 3.5vw;"> </Marquee>
+                    <h1>Kw til hestekrefter</h1>
+                </div>
+                <a href="index.html" style="width: ;"> <img src="logo.jpg" alt="logo" align="right" style="width:8vw;"> </a>
             </div>
-            <a href="index.html" style="width: ;"> <img src="logo.jpg" alt="logo" align="right" style="width:7.5vw;"> </a>
-        </div>
-    
-    <ul id="Innhold">
-            <li style="font-size:172%;"> <a class="active" href="2.Om-oss.html"> Om oss </a> </li>
-            <li style="font-size:172%;"> <a href="3.V%C3%A5re-sykler.html">  Våre motorsykler </a> </li>
-            <li style="font-size:172%;"> <a href="4.Inspirasjon.html"> Inspirasjon </a> </li>
-            <li style="font-size:172%;"> <a href="5.Verksted.html"> Verksted </a>  </li>
-            <li style="font-size:172%;"> <a href="6.Nettbutikk.html"> Nettbutikk </a> </li>
-            <li style="font-size:172%;"> <a href="8.Kontakt.html"> Kontakt oss </a> </li>
-            <li style="font-size:172%;"> <a href="9.Galleri.html"> Galleri </a> </li>
-    </ul> </header>
-    
-     
-    <br>
-    <p style="margin: 10px;"> Kw: <input type="number" id="idkw"> </p>
-<button id="idknapp" style="margin: 10px;"> Gjør om </button>    
-<br>
-    <br>
-<p style="margin: 10px;">Hestekrefter:</p> 
-    <p style="margin: 10px;" id="idhk"></p>
-    <br>
-    <br>
-       
-        
-    <p id="bottom"> <br> <iframe height="0.01" width="1225" style="border:1.5px solid rgb(250, 250, 250);"> </iframe>
-        <br>
-        <br>
-        <br>
-        Go Gutta AS <br>
-Besøkadresse: <br>
-Oslo 69 <br>
-0121 Oslo <br>
-        <a href="https://www.finn.no/mc/all/search.html?filters=" target="_blank"> <img src="finncom.png" alt="finn" align="right" class="finn"> </a>
-<br>
-Postadresse: <br>
-Postboks 77 - Nordstrand <br>
-1177 Oslo <br>
-<br>
-Tlf: 2103 7700 <br>
-email@Gogutta.no <br>
-Org.nr: 919050942MVA </p>
 
-    
-<script>
-    var kw=document.getElementById("idkw");
-    var knapp = document.getElementById("idknapp");
-    knapp.addEventListener("click", omregning);
-    
-    function omregning () {
-        var hk = (kw.value) * (1.3596216173);
-        var svar = document.getElementById("idhk");
-        svar.innerHTML=Math.round(hk*10)/10;
-    }
-</script>
+            <ul id="Innhold">
+                <li style="font-size:172%;"> <a class="active" href="2.Om-oss.html"> Om oss </a> </li>
+                <li style="font-size:172%;"> <a href="3.V%C3%A5re-sykler.html">  Våre motorsykler </a> </li>
+                <li style="font-size:172%;"> <a href="4.Inspirasjon.html"> Inspirasjon </a> </li>
+                <li style="font-size:172%;"> <a href="5.Verksted.html"> Verksted </a>  </li>
+                <li style="font-size:172%;"> <a href="6.Nettbutikk.html"> Nettbutikk </a> </li>
+                <li style="font-size:172%;"> <a href="8.Kontakt.html"> Kontakt oss </a> </li>
+                <li style="font-size:172%;"> <a href="9.Galleri.html"> Galleri </a> </li>
+            </ul> </header>
+
+
+        <br>
+        <p style="margin: 10px;"> Kw: <input type="number" id="idkw"> </p>
+        <button id="idknapp" style="margin: 10px;"> Gjør om </button>    
+        <br>
+        <br>
+        <p style="margin: 10px;">Hestekrefter:</p> 
+        <p style="margin: 10px;" id="idhk"></p>
+        <br>
+        <br>
+
+
+        <p id="bottom"> <br> <iframe height="0.01" width="1225" style="border:1.5px solid rgb(250, 250, 250);"> </iframe>
+            <br>
+            <br>
+            <br>
+            Go Gutta AS <br>
+            Besøkadresse: <br>
+            Oslo 69 <br>
+            0121 Oslo <br>
+            <a href="https://www.finn.no/mc/all/search.html?filters=" target="_blank"> <img src="finncom.png" alt="finn" align="right" class="finn"> </a>
+            <br>
+            Postadresse: <br>
+            Postboks 77 - Nordstrand <br>
+            1177 Oslo <br>
+            <br>
+            Tlf: 2103 7700 <br>
+            email@Gogutta.no <br>
+            Org.nr: 919050942MVA </p>
+
+
+        <script>
+            var kw=document.getElementById("idkw");
+            var knapp = document.getElementById("idknapp");
+            knapp.addEventListener("click", omregning);
+
+            function omregning () {
+                var hk = (kw.value) * (1.3596216173);
+                var svar = document.getElementById("idhk");
+                svar.innerHTML=Math.round(hk*10)/10;
+            }
+        </script>
     </body>
 </html>

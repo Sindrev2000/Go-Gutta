@@ -1,4 +1,4 @@
- 
+
 header { 
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
@@ -31,7 +31,7 @@ marquee {
 
 #Innhold {
     list-style-type: none;
-    background: rgb(80, 80, 80);
+    background: #212121;
     width: 100%;
     margin: 0px;
     padding: 0px;
@@ -41,10 +41,10 @@ marquee {
 }
 
 #Innhold a {
-  float: left;
-  display: block;
-  text-align: top;
-  text-decoration: none;
+    float: left;
+    display: block;
+    text-align: top;
+    text-decoration: none;
 }
 
 #Innhold a:hover {
@@ -53,17 +53,17 @@ marquee {
 }
 
 .content {
-  padding: 0px;
+    padding: 0px;
 }
 
 .sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .sticky + .content {
-  padding-top: 60px;
+    padding-top: 60px;
 }
 
 #Innhold     {
@@ -72,15 +72,16 @@ marquee {
     flex-wrap: wrap;
 }
 li {
-font-size: 2vw;
-margin: 0px;
+    font-size: 2vw;
+    margin: 0px;
 }
 
 li a {
     text-decoration: none;
-    color: red;
-    padding: 5px 15px;
-    font-size: 1.5vw;
+    color: #ff4141;
+    padding: 2px 2px;
+    font-size: 1.8vw;
+    font-weight: bold;
 }
 
 #Forsideimg {
@@ -94,17 +95,18 @@ html {
 body {
     border: 1px solid;
     background-image: url("Background.jpg");
-    font-family:"century gothic", impact;
+    font-family: 'Noto Sans', sans-serif;
     font-size:1.5vw;
     padding: 0px;
     margin: 15px auto;
     width: 70vw;
     min-width: 275px;
+    height: fit-content;
 }
 
 
 main {
-padding:10px;
+    padding:10px;
     text-align: center;
 }
 
@@ -130,9 +132,9 @@ button, input, textarea, select {
 #bottom {
     margin: 0px 0px 0px 0px;
     padding: 10px;
-    color: red;
+    color: #ff4141;
     background-color: black;
-    
+
 }
 
 table {
@@ -171,11 +173,21 @@ iframe {
 .flexi {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .flexi > * {
-    margin: 20px 0;
+    margin: 5px 0;
+}
+
+.flexi > img {
+    width: 22vw;
+    height: 22vw;
+}
+
+.flexi > video {
+    width: 22vw;
+    height: 40vw;
 }
 
 .extra-margin > * {
